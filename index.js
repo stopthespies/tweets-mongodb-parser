@@ -100,6 +100,7 @@ Parser.prototype.loadTweets = function(lastOffset)
 	    			return;
 	    		}
 
+
 	    		var tweet = {
 	    			_id : "" + status.id,
 	    			created_at : parseTwitterDate(status.created_at),
@@ -117,7 +118,9 @@ Parser.prototype.loadTweets = function(lastOffset)
 	    				time_zone : u.time_zone,
 	    				profile_image_url : u.profile_image_url.replace(/^https?:/i, ''),
 	    			},
+	    			all: status
 	    		};
+
 
 	    		coll.save(tweet, {w : 1}, function(err, res) {
 		    		if (err) throw err;
