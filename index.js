@@ -80,7 +80,7 @@ Parser.prototype.loadTweets = function(lastOffset)
     	var writesInProgress = 0;
 
     	if (!data.statuses.length) {
-    		finaliseRun(db, maxId);
+    		self.finaliseRun(db, maxId);
     	} else {
 	    	// check and find last ID
 	    	data.statuses.forEach(function(status) {
