@@ -102,10 +102,10 @@ Parser.prototype.loadTweets = function(lastOffset)
 
 
 	    		var tweet = {
-	    			_id : "" + status.id,
-	    			created_at : parseTwitterDate(status.created_at),
-	    			text : status.text,
+            _id : status.id_str,
 	    			id_str: status.id_str,
+            created_at : parseTwitterDate(status.created_at),
+            text : status.text,
 	    			user : {
 	    				id : u.id,
 	    				name : u.name,
