@@ -117,8 +117,7 @@ Parser.prototype.loadTweets = function(lastOffset)
 	    				friends_count : u.friends_count,
 	    				time_zone : u.time_zone,
 	    				profile_image_url : u.profile_image_url.replace(/^https?:/i, ''),
-	    			},
-	    			all: status
+	    			}
 	    		};
 
 
