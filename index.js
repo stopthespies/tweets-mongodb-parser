@@ -84,8 +84,8 @@ Parser.prototype.loadTweets = function(lastOffset)
     	} else {
 	    	// check and find last ID
 	    	data.statuses.forEach(function(status) {
-    			if (status.id > maxId) {
-    				maxId = status.id;
+    			if (status.id_str > maxId) {
+    				maxId = status.id_str;
     			}
 	    	});
 
